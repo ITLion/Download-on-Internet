@@ -16,6 +16,7 @@
 #import "AppDataModel.h"
 #import "YYModel.h"
 #import "APPCell.h"
+#import "NSString+Path.h"
 
 @interface ViewController ()<UITableViewDataSource>
 
@@ -71,12 +72,41 @@
     cell.iconImageView.image = [UIImage imageNamed:@"user_default"];
     
     if ([self.pictureCache objectForKey:model.icon]) {
-        cell.iconImageView.image = [UIImage imageNamed:model.icon];
+        cell.iconImageView.image = [self.pictureCache objectForKey:model.icon];
         return cell;
     }
     
+    UIImage *cacheImage = [UIImage imageWithContentsOfFile:[model.icon appendCache]];
+    if (cacheImage) {
+        [self.pictureCache setObject:cacheImage forKey:model.icon];
+        cell.iconImageView.image = cacheImage;
+        return cell;
+    }
     
+    if ([self.opCache objectForKey:model.icon]) {
+        return cell;
+    }
     
+    NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
+        
+        NSURL *url = [NSURL URLWithString:model.icon];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        UIImage *image = [UIImage imageWithData:data];
+        
+        if (image) {
+            [data writeToFile:[model.icon appendCache] atomically:YES];
+        }
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            if (image != nil) {
+                [self.pictureCache setObject:image forKey:model.icon];
+                [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            }
+            [self.opCache removeObjectForKey:model.icon];
+        }];
+    }];
+    [self.opCache setObject:op forKey:model.icon];
+    [self.queue addOperation:op];
     
     
     // 获取
@@ -88,6 +118,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [self.pictureCache removeAllObjects];
+    [self.opCache removeAllObjects];
+    [self.queue cancelAllOperations];
 }
 
 @end

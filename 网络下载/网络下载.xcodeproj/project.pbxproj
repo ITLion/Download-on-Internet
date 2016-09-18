@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CFCD85DE1D8ED22A00F598A9 /* APPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCD85DD1D8ED22A00F598A9 /* APPCell.m */; };
+		CFCD85E41D8EE99F00F598A9 /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCD85E31D8EE99F00F598A9 /* NSString+Path.m */; };
 		CFE363E91D8E954B00155611 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE363E81D8E954B00155611 /* main.m */; };
 		CFE363EC1D8E954B00155611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE363EB1D8E954B00155611 /* AppDelegate.m */; };
 		CFE363EF1D8E954B00155611 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE363EE1D8E954B00155611 /* ViewController.m */; };
@@ -44,6 +45,8 @@
 /* Begin PBXFileReference section */
 		CFCD85DC1D8ED22A00F598A9 /* APPCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPCell.h; sourceTree = "<group>"; };
 		CFCD85DD1D8ED22A00F598A9 /* APPCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPCell.m; sourceTree = "<group>"; };
+		CFCD85E21D8EE99F00F598A9 /* NSString+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Path.h"; path = "../NSString+Path.h"; sourceTree = "<group>"; };
+		CFCD85E31D8EE99F00F598A9 /* NSString+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Path.m"; path = "../NSString+Path.m"; sourceTree = "<group>"; };
 		CFE363E41D8E954B00155611 /* 网络下载.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网络下载.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE363E81D8E954B00155611 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CFE363EA1D8E954B00155611 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				CFE3644E1D8E960100155611 /* AppDataModel.m */,
 				CFCD85DC1D8ED22A00F598A9 /* APPCell.h */,
 				CFCD85DD1D8ED22A00F598A9 /* APPCell.m */,
+				CFCD85E21D8EE99F00F598A9 /* NSString+Path.h */,
+				CFCD85E31D8EE99F00F598A9 /* NSString+Path.m */,
 				CFE363F01D8E954B00155611 /* Main.storyboard */,
 				CFE363F31D8E954B00155611 /* Assets.xcassets */,
 				CFE363F51D8E954B00155611 /* LaunchScreen.storyboard */,
@@ -321,6 +326,7 @@
 				CFE3643F1D8E95E000155611 /* SDWebImageDecoder.m in Sources */,
 				CFE364491D8E95E000155611 /* UIImageView+WebCache.m in Sources */,
 				CFE3643A1D8E95E000155611 /* AFURLSessionManager.m in Sources */,
+				CFCD85E41D8EE99F00F598A9 /* NSString+Path.m in Sources */,
 				CFE364411D8E95E000155611 /* SDWebImageDownloaderOperation.m in Sources */,
 				CFE364421D8E95E000155611 /* SDWebImageManager.m in Sources */,
 				CFE363EF1D8E954B00155611 /* ViewController.m in Sources */,

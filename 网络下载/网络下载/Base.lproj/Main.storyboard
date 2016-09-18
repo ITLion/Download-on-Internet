@@ -24,8 +24,8 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mu5-hS-CoL">
                                             <rect key="frame" x="12" y="12" width="60" height="60"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="60" id="Vbo-e9-tea"/>
-                                                <constraint firstAttribute="height" constant="60" id="tgb-ir-PJB"/>
+                                                <constraint firstAttribute="height" constant="60" id="2oN-2t-hMQ"/>
+                                                <constraint firstAttribute="width" constant="60" id="c9Q-cg-5Bw"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7W-NO-7qI">
@@ -42,13 +42,12 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="mu5-hS-CoL" secondAttribute="bottom" constant="12" id="JTU-SQ-JCL"/>
-                                        <constraint firstItem="mu5-hS-CoL" firstAttribute="leading" secondItem="nlw-1p-5gb" secondAttribute="leading" constant="12" id="L5e-eL-ggq"/>
-                                        <constraint firstItem="9aA-5S-0m9" firstAttribute="leading" secondItem="G7W-NO-7qI" secondAttribute="leading" id="Np7-lC-ULE"/>
-                                        <constraint firstItem="G7W-NO-7qI" firstAttribute="leading" secondItem="mu5-hS-CoL" secondAttribute="trailing" constant="10" id="YaZ-oB-lAK"/>
-                                        <constraint firstItem="mu5-hS-CoL" firstAttribute="top" secondItem="nlw-1p-5gb" secondAttribute="top" constant="12" id="hDt-Id-FTD"/>
-                                        <constraint firstItem="9aA-5S-0m9" firstAttribute="bottom" secondItem="mu5-hS-CoL" secondAttribute="bottom" id="ifJ-fb-zzN"/>
-                                        <constraint firstItem="G7W-NO-7qI" firstAttribute="top" secondItem="mu5-hS-CoL" secondAttribute="top" id="yJJ-9H-7FE"/>
+                                        <constraint firstItem="mu5-hS-CoL" firstAttribute="top" secondItem="nlw-1p-5gb" secondAttribute="top" constant="12" id="D42-QB-kNL"/>
+                                        <constraint firstItem="G7W-NO-7qI" firstAttribute="leading" secondItem="mu5-hS-CoL" secondAttribute="trailing" constant="10" id="FR7-lk-rPp"/>
+                                        <constraint firstItem="9aA-5S-0m9" firstAttribute="leading" secondItem="G7W-NO-7qI" secondAttribute="leading" id="LIA-9o-qsU"/>
+                                        <constraint firstItem="G7W-NO-7qI" firstAttribute="top" secondItem="mu5-hS-CoL" secondAttribute="top" id="ef7-wX-frH"/>
+                                        <constraint firstItem="9aA-5S-0m9" firstAttribute="bottom" secondItem="mu5-hS-CoL" secondAttribute="bottom" id="lcM-ap-mVr"/>
+                                        <constraint firstItem="mu5-hS-CoL" firstAttribute="leading" secondItem="nlw-1p-5gb" secondAttribute="leading" constant="12" id="u8B-zW-MpW"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
