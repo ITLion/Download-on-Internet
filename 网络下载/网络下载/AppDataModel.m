@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  AppDataModel.m
 //  网络下载
 //
 //  Created by 赵世得 on 16/9/18.
 //  Copyright © 2016年 Zh_IOS. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AppDataModel.h"
 
-@interface ViewController : UITableViewController
-
+@implementation AppDataModel
 
 @end
-
